@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAKHI - A Sisterhood of Empowerment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #FFF0F5;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #FF69B4;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+    }
+    nav {
+      background-color: #FFC0CB;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #FF8C94;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+    }
+    .cta {
+      background-color: #FFC0CB;
+      padding: 1.5rem;
+      border-radius: 18px;
+      text-align: center;
+      margin-top: 2rem;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.8rem;
+      background-color: #FF69B4;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #FF8C94;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    details {
+      background-color: #ffe4ec;
+      border-radius: 12px;
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .popup {
+      background-color: white;
+      border: 2px solid #FF69B4;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+    .popup.show {
+      display: block;
+    }
+    .popup button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #FF69B4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px #FF69B4; }
+      50% { box-shadow: 0 0 20px #FF69B4; }
+    }
+  </style>
+  <script>
+    function togglePopup(id) {
+      document.getElementById(id).classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>SAKHI</h1>
+    <p>A Sisterhood of Empowerment</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#join">Join Us</a>
+    <a href="#badges">Badges</a>
+    <a href="#activities">Activities</a>
+    <a href="#rules">Rules</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>What is Sakhi?</h2>
+    <p>Sakhi is more than just a group—it’s a sisterhood dedicated to empowering girls aged 5 to 18. Founded with a heart
+ full of hope and a mission rooted in community, Sakhi aims to nurture young girls into confident, independent, and socially
+ aware individuals. The word “Sakhi” itself means “friend” or “companion,” and that perfectly reflects what this group is all
+ about: friendship, support, and growing together.</p>
+    <h3>Mission & Vision</h3>
+    <p><strong>Mission:</strong> Sakhi’s mission is to empower girls aged 5 to 18 by providing a safe, inclusive space where 
+they can build valuable skills, gain confidence, and develop leadership qualities. We are dedicated to fostering social awareness,
+ mental well-being, and independence through engaging community service, cultural activities, and fun learning experiences</p>
+    <p><strong>Vision:</strong>Our vision is to create a vibrant and supportive community where every girl grows into a confident,
+ independent, and socially conscious individual.Sakhi envisions a world where young girls stand strong together, uplift one another, 
+and create lasting impact for themselves and society at large. </p>
+  </section>
+
+  <section id="join">
+    <h2>Who Can Join?</h2>
+    <p>Sakhi welcomes all girls and young volunteers aged 5 to 18 years who are eager to learn, grow, and make a positive difference
+ in their community. Whether you’re curious, creative, or passionate about helping others, Sakhi is the perfect place to build new skills,
+ make friends, and become more confident.</p>
+  </section>
+
+  <section id="badges">
+    <h2>Badge Levels</h2>
+    <ul>
+      <li><strong>1.🌱 Beginner Sakhi (0–19 badges)</strong>: Curious & brave!</li>
+      <li><strong>2.🧭 Explorer Sakhi(20–39 badges)</strong>: Gaining skills and spirit</li>
+      <li><strong>3.🔦 Pathfinder Sakhi (40–59 badges)</strong>: Confident in her path</li>
+      <li><strong>4.🔥 Trailblazer Sakhi (60–79 badges)</strong>: Inspiring leadership</li>
+      <li><strong>5.🔥🔥 Flamekeeper Sakhi(80–99 badges)</strong>: Inspiring leadership</li>
+      <li><strong>6.⭐ Star Sakhi (100–124 badges)</strong>: Inspiring leadership</li>
+      <li><strong>7.👑 Crown Sakhi (125–149 badges)</strong>: Inspiring leadership</li>
+      <li><strong>8.✨Legend Sakhi (150+ badges)</strong>: Inspiring leadership</li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>Activity Library</h2>
+    <details>
+      <summary>🌿Environment & Nature</summary>
+      <ul>
+        <li>Plant a tree and track its growth</li>
+        <li>Design a kitchen garden</li>
+        <li>Make eco-friendly Holi colours</li>
+       <li>Create a compost bin at home or in a nearby garden</li>
+       <li>Take care of a potted plant for 2 months</li>
+       <li>Visit a forest or botanical garden</li>
+       <li>Identify 10 local trees and their benefits</li>
+       <li>Make a bird feeder </li>
+       <li>Conduct a cleanliness drive in a park</li>
+       <li>Volunteer for a tree-planting event</li>
+       <li>Recycle old newspapers into gift wrappers</li>
+       <li>Make a "No Plastic" pledge and stick to it for 30 days</li>
+       <li>Do rainwater harvesting</li>
+       <li>Campaign drive for water conservation</li>
+       <li>Organize an e-waste collection drive</li>
+       <li>Create a reusable cloth bag from old clothes</li>
+       <li>Learn and try new agricultural modern techniques.</li>
+       <li>Visit a farm and help for a day</li> 
+       <li>Save electricity at home for one month</li>
+       <li>Create a leaf/rubber stamp art piece</li>
+      </ul>
+    </details>
+    <details>
+      <summary>📘 Education & Learning</summary>
+      <ul>
+        <li>Read 10 novels & write reviews</li>
+        <li>Make a mini dictionary</li>
+        <li>Create a book of random facts</li>
+        <li>Teach a younger sibling or friend a new skill</li>
+        <li>Maintain a daily diary for 30 days</li>
+       <li>Create different study techniques which can help learn better and try it </li>
+       <li>Write a poem and recite in front of group</li>
+       <li>Make a craft using geometry </li>
+       <li>Learn basic budgeting with pocket money</li>
+       <li>Write a small story and illustrate it</li>
+       <li>Translate a Sanskrit poem to English</li>
+       <li>Visit a library and borrow 5 books</li>
+       <li>Watch a documentary and share the summary</li>
+       <li>Learn how to use an encyclopedia or atlas or map </li>
+       <li>Research about different historical woman leader</li>
+       <li>Do 15 minutes of reading every day for 1 month</li>
+       <li>Complete a crossword or sudoku book</li>
+       <li>Present about different states about our country in a unique way </li>
+       <li>Write a letter to your future self</li>
+       <li>Learn cursive handwriting or calligraphy</li> 
+      </ul>
+    </details>
+    <details>
+      <summary>💖 Community Service</summary>
+      <ul>
+        <li>Help at a local NGO for a day</li>
+        <li>Organize a donation drive</li>
+        <li>Create emergency kits</li>
+        <li>Teach a helper's child basic English</li>
+        <li>Make handmade cards for hospital patients</li>
+       <li>Participate in a blood donation awareness drive</li>
+       <li>Distribute food or water to the needy</li>
+       <li>Create a first-aid kit for your school/home</li>
+       <li>Volunteer for an animal shelter</li>
+       <li>Create posters on anti-bullying</li>
+       <li>Help your sibling or neighbor with studies</li>
+       <li>Distribute handmade masks or hygiene kits</li>
+       <li>Create a safety chart for emergency numbers</li>
+       <li>Write positive messages and stick around colony</li>
+       <li>Teach basic mobile use to an elder</li>
+       <li>Help digitize old photos or letters for elders</li>
+       <li>Collect books for a local library</li>
+       <li>Teach a friend how to ride a cycle</li>
+       <li>Serve water to delivery workers or guards</li>
+       <li>Help make care packages during winter</li> 
+      </ul>
+    </details>
+<details>
+      <summary>🌺 Culture & Tradition</summary>
+      <ul>
+        <li>Cook a traditional meal of your culture</li>
+        <li>Learn a folk dance </li>
+        <li>Make a rangoli during a festival</li>
+       <li>Decorate a diya and gift it</li>
+       <li>Make traditional greeting cards for Diwali</li>
+       <li>Dress in traditional attire and explain its origin</li>
+       <li>Learn a regional song and perform it</li>
+       <li>Learn to say "Hello" in 10 Indian languages </li>
+       <li>Create a scrapbook of Indian monuments</li>
+       <li>Visit a museum or heritage site</li>
+       <li>Interview a grandparent about their childhood</li>
+       <li>Attend a local cultural event</li>
+       <li>Paint a tribal art form (Warli, Gond, etc.)</li>
+       <li>Celebrate a festival from another culture</li>
+       <li>Make an Indian state map with food, clothing, art</li>
+       <li>Watch a regional movie and summarize</li>
+       <li>Try mehendi and design your own pattern</li>
+       <li>Make a video or write about your favorite tradition</li> 
+       <li>Organize a "Culture Day" with friends</li>
+       <li>Write about a forgotten Indian custom</li>
+      </ul>
+    </details>
+<details>
+      <summary>🧠 Mental Health & Wellness</summary>
+      <ul>
+        <li>Practice deep breathing for 10 days</li>
+        <li>Maintain a gratitude journal for 2 weeks</li>
+        <li>Learn 5-10 yoga poses and perform daily</li>
+       <li>Use devices only for one hour daily for a week</li>
+       <li>Share a happy story with a group</li>
+       <li>Learn about emotions and name 5 positive ones</li>
+       <li>Create a "calm corner" in your room</li>
+       <li>Write a letter to your role model</li>
+       <li>Make a vision board of your goals</li>
+       <li>Meditate for 5 minutes a day for 10 days</li>
+       <li>Say 3 good things to yourself every day</li>
+       <li>Perform a random act of kindness for 15 days</li>
+       <li>Make a self-care checklist</li>
+       <li>Learn basic emotional first aid</li>
+       <li>Read a book on mindfulness</li>
+       <li>Teach a friend how to journal</li>
+       <li>Spend some time in nature .Just peace</li>
+       <li>Make a list of your top 10 strengths/li> 
+       <li>Write a motivational quote and keep it in front of you </li>
+       <li>Create a "mood tracker" chart for a month</li>
+      </ul>
+    </details>
+<details>
+      <summary>🎨 Skills & Hobbies</summary>
+      <ul>
+        <li>Learn to knit or crochet</li>
+        <li>Sew anything or any type</li>
+        <li>Learn to bake something</li>
+       <li>Paint with watercolors or acrylics</li>
+       <li>TMake handmade jewellery</li>
+       <li>Write a short story or poem</li>
+       <li>Learn 5 fun or magic tricks</li>
+       <li>Try a DIY science experiment at home</li>
+       <li>Craft something from paper</li>
+       <li>Create a journal of your favorite things</li>
+       <li>Write and perform a skit</li>
+       <li>Record a podcast or video on any topic</li>
+       <li>Make paper quilling art</li>
+       <li>Decorate your room with a handmade craft</li>
+       <li>Learn a random talent</li>
+       <li>Recycle and make something useful</li>
+       <li>Make something from Clay,Blocks or Lego from your imagination</li>
+       <li>Make a friendship bracelet</li> 
+       <li>Design your own board game</li>
+       <li>Make a nature mandala from leaves, stones</li>
+      </ul>
+    </details>
+<details>
+      <summary>🏃‍♀️ Physical Fitness</summary>
+      <ul>
+        <li>Skip 100 times in one go</li>
+        <li>Learn and perform a full dance routine</li>
+        <li>Climb 5 flights of stairs without stopping</li>
+       <li>Run/walk 1 km daily for a week</li>
+       <li>Hold a plank for 1 minute</li>
+       <li>Practice Surya Namaskar 10 times</li>
+       <li>Learn and demonstrate 5 stretching exercises</li>
+       <li>Participate in a relay or sports event</li>
+       <li>Join a weekend trek or nature walk</li>
+       <li>Volunteer for a tree-planting event</li>
+       <li>Take part in a yoga workshop</li>
+       <li>Master a hula hoop for 1 minute</li>
+       <li>Learn a martial arts move</li>
+       <li>Walk barefoot on grass for 10 days</li>
+       <li>Learn basic gymnastics moves</li>
+       <li>Build a mini obstacle course</li>
+       <li>Perform 20 sit-ups in one go</li>
+       <li>Practice skipping every day for 10 days</li> 
+       <li>Do a dance workout to 3 songs</li>
+      </ul>
+    </details>
+<details>
+      <summary>💡 STEM</summary>
+      <ul>
+        <li>Make a volcano experiment with baking soda</li>
+        <li>Build a basic electric circuit model</li>
+        <li>Learn about solar energy and make a model</li>
+       <li>Observe the moon for 7 days and record phases</li>
+       <li>Create a science fact poster</li>
+       <li>Research 3 female scientists and present</li>
+       <li>Learn about magnets and perform 3 tricks</li>
+       <li>Create a paper robot with moving parts</li>
+       <li>Plant seeds and record growth scientifically</li>
+       <li>Try coding a basic animation online</li>
+       <li>Make a working model of a windmill</li>
+       <li>Watch a science show and share a summary</li>
+       <li>Build a pulley or lever model</li>
+       <li>Learn binary code and write your name</li>
+       <li>Visit a science museum and write about it</li>
+       <li>Make a floating boat out of foil</li>
+       <li>Conduct a rainbow density jar experiment</li>
+       <li>Make a model of the solar system</li> 
+       <li>Track and graph daily temperatures for a week</li>
+      </ul>
+    </details>
+<details>
+      <summary>🛠 Life Skills</summary>
+      <ul>
+        <li>Make a phone call to order something or book</li>
+        <li>Learn how to iron </li>
+        <li>Clean up after yourself</li>
+       <li>Help cook 5 basic staple dishes </li>
+       <li>Learn how to do laundry</li>
+       <li>Visit a forest or botanical garden</li>
+       <li>Pack a travel bag efficiently</li>
+       <li>Memorize emergency contact numbers </li>
+       <li>Use Google Maps to find a location</li>
+       <li>Write a formal email</li>
+       <li>Use a basic sewing kit</li>
+       <li>Organize your school bag or desk</li>
+       <li>Practice giving a short presentation</li>
+       <li>Read and understand a bus/train schedule</li>
+       <li>Set and follow a weekly cleaning plan</li>
+       <li>Make a shopping list and follow it</li>
+       <li>Understand basic nutrition labels</li>
+       <li>Create your own planner</li> 
+       <li>Help manage a birthday party or event</li>
+       <li>Budget a pretend ₹2000 for the week</li>
+      </ul>
+    </details>
+<details>
+      <summary>👯 Leadership & Teamwork</summary>
+      <ul>
+       <li>Lead a group activity at school</li>
+       <li>Organize a mini game session</li>
+       <li>Plan a picnic or playdate with friends</li>
+       <li>Create a team name and cheer</li>
+       <li>Help resolve a small group conflict</li>
+        <li>Be a buddy to a new group member</li>
+<li>Organize a classroom birthday surprise</li>
+<li>Make a “kindness tree” with friends</li>
+<li>Host a Kahoot quiz on any subject</li>
+<li>Be the leader in a team project</li>
+<li>Co-write a skit or poem with a friend</li>
+<li>Coordinate a shared project online</li>
+<li>Make a presentation with 2–3 friends</li>
+<li>Host a mini awards day</li>
+<li>Help plan a cultural or festival event</li>
+<li>Start a group journal or scrapbook</li>
+<li>Conduct an interview with a team member</li>
+<li>Present a group art display</li>
+<li>Perform a flashmob or dance with team</li>
+<li>Lead a nature walk or awareness campaign</li>
+
+      </ul>
+    </details>
+<details>
+      <summary>🌍 Global Awareness & Citizenship</summary>
+      <ul>
+    <li>Learn about the United Nations and its goals</li>
+<li>Write a letter to a girl in another country</li>
+<li>Create a peace poster for International Peace Day</li>
+<li>Watch a video on a global issue </li>
+<li>Learn about the rights of the child (UNCRC)</li>
+<li>Research about 3 inspiring women from different countries</li>
+<li>Host a "world cultures" potluck or virtual meet</li>
+<li>Make a presentation on global warming</li>
+<li>Join a virtual penpal platform</li>
+<li>Celebrate a global day (Earth Day, UN Day, etc.)</li>
+      </ul>
+    </details>
+<details>
+      <summary>🛍 Entrepreneurship & Innovation</summary>
+      <ul>
+       <li>Set up a mini pop-up store (handmade crafts, bookmarks)</li>
+<li>Design packaging for a DIY product</li>
+<li>Calculate cost and pricing for a pretend item</li>
+<li>Sell one handmade product to a friend or family member</li>
+<li>Brainstorm 3 small business ideas</li>
+<li>Watch a video on women entrepreneurs</li>
+<li>Create a logo for your brand idea</li>
+<li>Make a pitch video for your pretend business</li>
+<li>Conduct a pretend customer survey</li>
+<li>Organize a Sakhi mini flea market</li>
+ </ul>
+    </details>
+<details>
+      <summary>🎭 Performing Arts</summary>
+      <ul>
+    <li>Prepare a 1-minute monologue from a play or movie</li>
+<li>Lip sync a famous scene and perform it</li>
+<li>Learn a mime act</li>
+<li>Create a funny puppet show</li>
+<li>Write and direct a 2-minute skit</li>
+<li>Perform a folk song with actions</li>
+<li>Choreograph a group dance</li>
+<li>Record yourself imitating a famous voice</li>
+<li>Attend a theatre performance or watch online</li>
+<li>Organize a mini "open mic" at home or school</li>
+      </ul>
+    </details>
+ <details>
+      <summary>🍴 Food & Nutrition</summary>
+      <ul>
+    <li>Make a healthy fruit chaat</li>
+<li>Learn to identify healthy vs junk food</li>
+<li>Create your own smoothie recipe</li>
+<li>Record your food intake for 3 days</li>
+<li>Decorate a healthy snack plate</li>
+<li>Learn about traditional superfoods in India</li>
+<li>Watch a cooking video and recreate a dish</li>
+<li>Make a food pyramid chart</li>
+<li>Learn to cook with zero waste</li>
+<li>Visit a local vegetable market</li>
+      </ul>
+    </details>
+<details>
+      <summary>📷 Media & Creativity</summary>
+      <ul>
+   <li>Make a 1-minute documentary about your day</li>
+<li>Create a slideshow of your favorite memories</li>
+<li>Design a digital poster on Canva or similar</li>
+<li>Create a short comic strip</li>
+<li>Write a blog post on something you love</li>
+<li>Make a GIF or meme related to school life</li>
+<li>Take and edit 5 photos of nature</li>
+<li>Curate a digital photo gallery</li>
+      </ul>
+    </details>
+<details>
+      <summary>🐾 Animal Care & Kindness</summary>
+      <ul>
+   <li>Feed a stray animal</li>
+<li>Visit an animal shelter</li>
+<li>Make a poster about animal rights</li>
+<li>Create a feeding bowl or water station</li>
+<li>Learn about 3 endangered Indian species</li>
+<li>Watch a wildlife documentary</li>
+<li>Make toys or blankets for rescued animals</li>
+<li>Start a mini bird census in your locality</li>
+<li>Write a story from a pet’s point of view</li>
+<li>Observe an ant/bee trail and sketch it</li>
+      </ul>
+    </details>
+<details>
+      <summary>🎓 Academic Enrichment</summary>
+      <ul>
+  <li>Learn 10 new words in a foreign language</li>
+<li>Create a trivia quiz for your friends</li>
+<li>Watch an educational YouTube channel and take notes</li>
+<li>Join a virtual museum tour</li>
+<li>Take a free online course</li>
+<li>Make flashcards for any subject</li>
+<li>Teach a topic to your sibling or friend</li>
+<li>Watch a TED-Ed video and explain it</li>
+<li>Make your own board game based on school subjects</li>
+<li>Attempt a brain teaser or riddle book</li>
+      </ul>
+    </details>
+<details>
+      <summary>🧵 Domestic & Crafting Skills</summary>
+      <ul>
+ <li>Stitch a small cushion or pouch</li>
+<li>Make your own hair accessories</li>
+<li>Reuse old clothes into something useful</li>
+<li>Decorate a tote bag</li>
+<li>Learn to hem or repair a torn edge</li>
+<li>Help decorate the house for an event</li>
+<li>Try hand embroidery or patchwork</li>
+<li>Weave paper or fabric strips into a mat</li>
+<li>Make your own apron</li>
+<li>Organize your wardrobe by color</li>
+      </ul>
+    </details>
+<details>
+      <summary>⛺ Outdoor Exploration</summary>
+      <ul>
+  <li>Go on a sunrise walk</li>
+<li>Take part in a picnic with nature-based games</li>
+<li>Draw a map of your neighborhood</li>
+<li>Collect natural materials for a craft</li>
+<li>Track animal prints on a trail</li>
+<li>Lie on the grass and cloud-watch for 20 minutes</li>
+<li>Go on a tree-identification walk</li>
+<li>Make a weather observation journal</li>
+<li>Learn 5 types of rocks or soils</li>
+<li>Do a star-gazing session</li>
+      </ul>
+    </details>
+<details>
+      <summary>💬 Communication Skills</summary>
+      <ul>
+  <li>Practice a debate with a sibling or friend</li>
+<li>Learn to introduce yourself in 2 languages</li>
+<li>Host a storytelling session</li>
+<li>Write a formal letter to a school principal</li>
+<li>Record a speech on a topic you care about</li>
+<li>Learn how to interview someone</li>
+<li>Share a daily good news story for 1 week</li>
+<li>Use emojis to write a sentence/story</li>
+<li>Practice telephone etiquette</li>
+<li>Roleplay ordering food in a restaurant</li>
+      </ul>
+    </details>
+<details>
+      <summary>🌍 Global Awareness & Citizenship</summary>
+      <ul>
+<li>Research a UN Sustainable Development Goal and create a poster</li>
+<li>Learn greetings in 5 foreign languages</li>
+<li>Write a letter to a pen pal from another country</li>
+<li>Watch a world news segment and discuss it</li>
+<li>Identify flags of 20 countries</li>
+<li>Learn about a global charity and share its mission</li>
+<li>Organize a small fundraiser for a cause</li>
+<li>Debate on a current global issue in your group</li>
+<li>Create a cultural exchange presentation</li>
+<li>Make a world map with your dream travel places</li>
+    </details>
+<details>
+      <summary>🎭 Performing Arts & Creativity</summary>
+      <ul>
+<li>Learn and perform a short monologue</li>
+<li>Write and direct a short play with friends</li>
+<li>Learn to play a musical instrument (basic level)</li>
+<li>Choreograph a dance to a traditional or modern song</li>
+<li>Make and wear a costume for a role-play</li>
+<li>Record a song cover or poem recital video</li>
+<li>Create shadow puppets and perform a story</li>
+<li>Learn basic stage makeup techniques</li>
+<li>Organize a talent show in your group</li>
+<li>Design a poster for a performance event</li>
+      </ul>
+    </details>
+<details>
+      <summary>💼 Financial Literacy</summary>
+      <ul>
+  <li>Create a simple business plan for a lemonade stand or craft sale</li>
+<li>Learn about saving and interest by opening a mock bank account</li>
+<li>Research different jobs and share about one you like</li>
+<li>Track your expenses for a week and analyze spending</li>
+<li>Make price tags and sell handmade crafts to family</li>
+<li>Learn how to make a bill or receipt</li>
+<li>Interview a local shop owner about their business</li>
+<li>Learn the basics of advertising and create an ad</li>
+<li>Role-play a customer and seller interaction</li>
+<li>Create a mock budget for a birthday party</li>
+      </ul>
+    </details>
+<details>
+      <summary>🌲 Adventure</summary>
+      <ul>
+ <li>Identify 10 bird species in your area</li>
+<li>Learn basic knots used in camping or sailing</li>
+<li>Plan and pack a day hiking trip</li>
+<li>Build a simple shelter using natural materials</li>
+<li>Learn how to read a compass and use it</li>
+<li>Track and identify insects in your garden</li>
+<li>Try fishing or learn about it from an expert</li>
+<li>Stargaze and learn about Dhruvtaara</li>
+<li>Collect and classify different types of rocks</li>
+<li>Write a nature poem while outdoors</li>
+      </ul>
+    </details>
+<details>
+      <summary>🔧 Technology & Innovation</summary>
+      <ul>
+ <li>Build a simple DIY robot or mechanical toy</li>
+<li>Learn basic computer coding using block-based languages</li>
+<li>Create a stop-motion animation using clay or toys</li>
+<li>Make a simple website or blog</li>
+<li>Research famous inventors and their inventions</li>
+<li>Create a tech glossary with definitions</li>
+<li>Learn how to fix a minor tech issue (like a slow phone)</li>
+<li>Try using voice assistants like Siri or Google Assistant</li>
+<li>Make a digital photo album or slideshow</li>
+<li>Record and edit a short video on your phone</li>
+      </ul>
+    </details>
+<details>
+      <summary>🍳 Culinary Arts & Nutrition</summary>
+      <ul>
+<li>Make a healthy snack and share the recipe</li>
+<li>Learn to use 3 different kitchen tools safely</li>
+<li>Create a weekly meal plan for your family</li>
+<li>Make a traditional Indian sweet</li>
+<li>Try a recipe from a different Indian state</li>
+<li>Organize a cooking competition with friends or family</li>
+<li>Make your own smoothie or juice blend</li>
+<li>Learn about portion sizes and balanced meals</li>
+<li>Prepare lunchbox meals for 3 days</li>
+<li>Grow a herb like mint or coriander to use in cooking</li>
+      </ul>
+    </details>
+<details>
+      <summary>🧩 Critical Thinking & Problem Solving</summary>
+      <ul>
+<li>Solve 5 logic puzzles or brain teasers</li>
+<li>Play a strategy board game with friends or family</li>
+<li>Participate in a scavenger hunt</li>
+<li>Design your own puzzle or riddle</li>
+<li>Learn how to budget time using a daily planner</li>
+<li>Create a plan to solve a community problem</li>
+<li>Conduct a simple scientific experiment and record results</li>
+<li>Practice mindfulness by solving one problem calmly every day</li>
+<li>Interview someone about how they solve problems</li>
+<li>Write a story where the character solves a mystery</li>
+      </ul>
+    </details>
+<details>
+      <summary>🌸 Personal Growth & Reflection</summary>
+      <ul>
+<li>Write a letter to your future self about your dreams</li>
+<li>Set 3 personal goals and track progress for a month</li>
+<li>Create a "strengths and weaknesses" chart</li>
+<li>Practice public speaking by presenting to family or friends</li>
+<li>Learn to manage stress through breathing exercises</li>
+<li>Keep a mood diary for two weeks</li>
+<li>Read a biography of an inspirational woman</li>
+<li>Share a personal story of overcoming fear or challenge</li>
+<li>Create a vision board for your next school year</li>
+<li>Practice daily affirmations for confidence</li>
+      </ul>
+    </details>
+<details>
+      <summary>👫 Friendship & Social Skills</summary>
+      <ul>
+<li>Plan a surprise for a friend or family member</li>
+<li>Practice active listening during conversations</li>
+<li>Write thank-you notes to three people who helped you</li>
+<li>Learn how to resolve conflicts peacefully</li>
+<li>Organize a group picnic or outing</li>
+<li>Help a friend with homework or a project</li>
+<li>Learn how to introduce yourself confidently</li>
+<li>Make friendship bracelets and gift them</li>
+<li>Volunteer to be a buddy for a new student</li>
+<li>Share your favorite hobby and teach it to others</li>
+      </ul>
+    </details>
+<details>
+      <summary>🛡 Safety & First Aid</summary>
+      <ul>
+ <li>Learn how to call emergency services and what to say</li>
+<li>Practice basic first aid for cuts and bruises</li>
+<li>Create an emergency evacuation plan for home</li>
+<li>Identify safe places in your neighborhood</li>
+<li>Learn fire safety tips and practice a drill</li>
+<li>Make a home safety checklist</li>
+<li>Learn how to swim or water safety basics</li>
+<li>Practice wearing a helmet and other safety gear</li>
+<li>Understand internet safety and privacy rules</li>
+<li>Learn how to help someone who is choking</li>
+      </ul>
+    </details>
+<details>
+      <summary>👧 MENSTRUAL HEALTH & HYGIENE </summary>
+      <ul>
+ <li>Track your menstrual cycle for three months.</li>
+<li>Learn how to use a sanitary pad.</li>
+<li>Practice hygienic disposal of menstrual products.</li>
+<li>Create your own period emergency kit.</li>
+<li>Watch a video or attend a session on menstrual health.</li>
+<li>Talk to an elder or guardian about periods confidently.</li>
+<li>Learn natural ways to reduce period cramps.</li>
+<li>Discuss myths and facts about menstruation.</li>
+<li>Attend a menstrual health awareness workshop.</li>
+<li>Visit a gynecologist or attend a Q&A session.</li>
+<li>Help distribute period products in your local area.</li>
+<li>Make a short presentation on menstrual health.</li>
+<li>Journal about your first period experience.</li>
+<li>Learn about PMS and how to manage mood swings.</li>
+<li>Understand period syncing with friends.</li>
+<li>Talk to a boy about periods to break taboos.</li>
+<li>Learn about the biology of menstruation from a textbook.</li>
+      </ul>
+    </details>
+<details>
+      <summary>⛰️ EMERGENCY & SURVIVAL SKILLS </summary>
+      <ul>
+<li>Pack an emergency go-bag with basic supplies.</li>
+<li>Memorize 3 emergency contact numbers.</li>
+<li>Learn basic first-aid skills (cuts, burns, fainting).</li>
+<li>Practice the STOP-DROP-ROLL fire escape method.</li>
+<li>Watch a survival video or documentary.</li>
+<li>Role-play an earthquake or fire drill.</li>
+<li>Learn how to purify water using boiling.</li>
+<li>Learn to use a water filter or purification tablets.</li>
+<li>Participate in a mock natural disaster drill.</li>
+<li>Build a temporary shelter using bedsheets and sticks.</li>
+<li>Learn basic knot tying.</li>
+<li>Understand how to signal for help.</li>
+<li>Learn about safe food during a disaster.</li>
+<li>Create your own emergency contact card.</li>
+<li>Try lighting a candle or fire safely (with adult supervision).</li>
+<li>Learn how to navigate using the sun or stars.</li>
+<li>Practice conserving water in daily life.</li>
+<li>Make a mini first-aid box.</li>
+<li>Learn what to do if someone is unconscious.</li>
+<li>Understand the basics of CPR </li>.
+<li>Create a checklist for home safety.</li>
+<li>Learn how to cook one meal without gas/electricity.</li>
+<li>Learn about climate change and its survival implications.</li>
+<li>Participate in a cleanliness or disaster awareness drive.</li>
+<li>Learn the signs of heatstroke and dehydration.</li>
+<li>Join a self-defense session.</li>
+<li>Understand different types of natural disasters.</li>
+<li>Create a poster on disaster readiness.</li>
+<li>Practice a home lockdown emergency drill.</li>
+<li>Learn how to call for help using a mobile or landline.</li>
+      </ul>
+    </details>
+<details>
+      <summary>🛈 STREET SMARTS & PERSONAL SAFETY </summary>
+      <ul>
+ <li>Memorize emergency helpline numbers (100, 1091, 112).</li>
+<li>Role-play situations like getting lost in a mall.</li>
+<li>Learn to identify unsafe situations and red flags</li>.
+<li>Keep a whistle or safety alarm in your bag.</li>
+<li>Learn how to protect your phone and identity online.</li>
+<li>Create a digital safety checklist.</li>
+<li>Understand good touch vs. bad touch.</li>
+<li>Talk about how to safely use public transport.</li>
+<li>Create a buddy system plan for travel.</li>
+<li>Learn basic map reading.</li>
+<li>Learn self-defense moves like elbow jab and palm strike.</li>
+<li>Understand the concept of safe adults and trusted people.</li>
+<li>Practice walking confidently alone.</li>
+<li>Create a list of safe places in your neighborhood.</li>
+<li>Learn how to send live location through WhatsApp</li>.
+<li>Join or create a neighborhood watch group.</li>
+<li>Write about a time you felt unsafe and how you handled it.</li>
+<li>Participate in an online safety workshop.</li>
+<li>Talk to a police officer or NGO representative about safety.</li>
+      </ul>
+    </details>
+<details>
+      <summary>⚖️ MENTAL HEALTH, RESPONSIBILITY & INDEPENDENCE </summary>
+      <ul>
+<li>Start a gratitude journal.</li>
+<li>Meditate for 5 minutes daily for a week.</li>
+<li>Learn the basics of mental health and emotional hygiene.</li>
+<li>Watch a short film about teenage mental health.</li>
+<li>Take a break from social media for 1 day.</li>
+<li>Share your worries with a trusted friend or elder.</li>
+<li>Learn about anxiety and how to manage it.</li>
+<li>Make a calming box with items that relax you.</li>
+<li>Create a daily routine chart.</li>
+<li>Wake up early and make your bed every day for a week.</li>
+<li>Help cook a family meal once a week.</li>
+<li>Clean your room and organize your books.</li>
+<li>Try going to the market and buying groceries</li>
+<li>Make a budget and track expenses for a week.</li>
+<li>Help someone younger than you with homework.</li>
+<li>Be responsible for a house chore for a month.</li>
+<li>Learn to do your own laundry.</li>
+<li>Sew a button or do a basic stitch</li>.
+<li>Write a letter to your future self.</li>
+<li>Join a community drive.</li>
+<li>Talk about body image and self-love.</li>
+<li>Attend a workshop on inclusivity and respect.</li>
+<li>Write a poem or blog on being a strong girl.</li>
+<li>Learn about different cultures.</li>
+<li>Celebrate a festival from another region.</li>
+<li>Help a friend or family member in need.</li>
+<li>Learn how to write an email.</li>
+<li>Take care of a plant or pet.</li>
+<li>Organize a small event or game for younger kids.</li>
+<li>Celebrate all your completed tasks with a badge ceremony!</li>
+      </ul>
+    </details>
+    <button onclick="togglePopup('popup')">See Full Library</button>
+  </section>
+
+  <section id="rules">
+    <h2>Rules & Guidelines</h2>
+    <details>
+      <summary>Tap to View the Full Rule Book</summary>
+      <ul>
+        <li>1. Age of Members and Volunteers:
+Girls aged 5 to 18 years are eligible to join as members or volunteers.</li>
+<li>2. Parental Consent:
+Parental or guardian consent is required for all members and volunteers</li>
+<li>3. Voluntary Participation:
+Joining or leaving the group, whether as a volunteer or participant (girl), is completely voluntary. There are no mandatory attendance or commitments.</li>
+<li>4. Respect & Inclusivity:
+Everyone—volunteers, girls, families—is treated with respect and dignity. Discrimination or exclusion of any kind is strictly prohibited.</li>
+<li>5. Safety and Child Protection:
+•	All volunteers must adhere to child safeguarding policies to protect girls from harm.
+•	Any suspected abuse, neglect, or unsafe situations must be reported immediately to group leaders.
+•	Volunteers must never be alone with minors; always work in pairs or groups.</li>
+<li>6. Confidentiality:
+Personal information of girls and families is confidential. Volunteers must never share sensitive information outside the group.</li>
+<li>7. Appropriate Conduct:
+Volunteers must behave professionally and responsibly during all interactions with girls and families, both during activities and online.</li>
+<li>8. Communication:
+Maintain respectful, positive, and clear communication within the group and with families.</li>
+<li>9. Parental Involvement:
+Parents/guardians are encouraged to be informed about the group’s activities and may be invited to participate or observe.</li>
+<li>10. No Bullying or Harassment:
+Bullying, harassment, or intimidation is not tolerated among volunteers or girls.</li>
+<li>11 Dress Code:
+Volunteers and participants should dress modestly and appropriately, respecting local cultural norms.</li>
+<li>12. Substance Use:
+No volunteer or participant should consume or be under the influence of alcohol, drugs, or any substance during group activities.</li>
+<li>13. Use of Media & Social Media:
+•	No photos or videos of girls can be taken or shared without explicit parental consent.
+•	Volunteers must maintain professionalism on social media when posting about the group.</li>
+<li>14. Inclusivity:
+The group welcomes girls from all backgrounds, regardless of religion, caste, socioeconomic status, or disability.</li>
+<li>15. Conflict Resolution:
+Any disagreements should be resolved respectfully and privately with group leaders.</li>
+<li>16. Respect for Cultural Sensitivities:
+Volunteers must respect cultural and religious beliefs of participants and their families.</li>
+<li>17. No Political or Religious Advocacy:
+Avoid promoting political or religious views during activities to maintain a neutral and inclusive environment.</li>
+<li>18. Volunteering Roles:
+Volunteers may support in mentorship, education, awareness sessions, events, and other activities as per their interest and skills.</li>
+<li>19. Transparency in Fundraising:
+Any fundraising must be transparent, with clear communication about how funds are used.</li>
+<li>20. Feedback:
+Volunteers and participants are encouraged to give feedback to improve the group’s activities and impact.</li>
+<li>21 Emergency Procedures:
+Volunteers must know and follow emergency protocols during events or outreach.</li>
+<li>22. No Financial Transactions:
+Volunteers must not ask for or accept money from girls or families in connection with group activities.</li>
+<li>23. Respect Group Decisions:
+Members should support decisions made by group coordinators regarding activities and policies.</li>
+<li>24. Positive Environment:
+Create an encouraging and supportive atmosphere for girls to grow confident and independent.</li>
+<li>25. Flexibility:
+Members can join or leave at any time without obligations or penalties.</li>
+</li>
+        
+      </ul>
+    </details>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:sakhi.sisterhood@gmail.com">sakhi.sisterhood@gmail.com</a></p>
+    <p>Phone: +91 8512819589</p>
+    <div class="social-links">
+      <a href="https://instagram.com/sakhi_sisterhood">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SAKHI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
